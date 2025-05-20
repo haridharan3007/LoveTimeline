@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="quiz.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo"><span>Ethra Company & Co</span></a>
+      <nav class="navigation">
+        <a href="game.html" id="game">Game</a>
+        <a href="index.html" id="timeline">Timeline</a>
+        <a href="grievance.html" id="grievance">Grievance form</a>
+      </nav>
+    </header>
+    <div class="container">
+      <main class="quiz-container">
+        <div class="question-section">
+          <span id="question-number">Question 1</span>
+          <h2 id="question-text">Which image matches this category?</h2>
+          <p id="question-instruction"></p>
+        </div>
+
+        <div id="options" class="options-grid hidden">
+          <!-- Two image options will be inserted here -->
+        </div>
+        <div id="text-options" class="text-options hidden">
+          <!-- Text options will be inserted here -->
+        </div>
+
+        <div id="feedback" class="feedback"></div>
+      </main>
+    </div>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+          <span class="close-btn">&times;</span>
+          <h2>No Access</h2>
+          &nbsp;
+          <p>
+            Hey, You still dont have the permission yet. Finish the quiz and get
+            access to the content
+          </p>
+        </div>
+    <script src="quiz.js"></script>
+  </body>
+</html>

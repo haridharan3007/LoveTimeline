@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Match Made in heaven!</title>
+    <link rel="stylesheet" href="match.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo"><span>Ethra Company & Co</span></a>
+      <nav class="navigation">
+        <a href="game.html" id="game">Game</a>
+        <a href="index.html" id="timeline">Timeline</a>
+        <a href="grievance.html" id="grievance">Grievance form</a>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="match-container">
+        <div class="match-header">
+          <h1>It's a Match!</h1>
+          <p>
+            Congrats you both have 99.9% similarities and you've unlocked a game
+            , timeline and grievance form with him
+          </p>
+        </div>
+
+        <div class="profiles">
+          <img src="gayathri quiz.jpeg" alt="Profile 1" class="profile profile-1" />
+          <img src="hari.jpeg" alt="Profile 2" class="profile profile-2" />
+        </div>
+
+        <div class="actions">
+          <div class="bio-1">
+            <p><b>Name:</b>&nbsp;&nbsp; Gayathri</p>
+            <p><b>Zodiac:</b>&nbsp;&nbsp;Cancer</p>
+            <p><b>DOB:</b>&nbsp;&nbsp; 30/12/2004</p>
+            <p><b>Favorite genre:</b>&nbsp;&nbsp; Rom-coms</p>
+            <p><b>Enjoys:</b>&nbsp;&nbsp; Coffee,being alone</p>
+          </div>
+          <div class="bio-2">
+            <p><b>Name:</b>&nbsp;&nbsp; Haridharan</p>
+            <p><b>Zodiac:</b>&nbsp;&nbsp;Cancer</p>
+            <p><b>DOB:</b>&nbsp;&nbsp; 30/07/2000</p>
+            <p><b>Favorite genre:</b>&nbsp;&nbsp; Sci-fi,Adventure</p>
+            <p><b>Enjoys:</b>&nbsp;&nbsp; Tea,being alone</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Create confetti effect
+      function createConfetti() {
+        const colors = ["#ff4757", "#ff6b81", "#ffa502", "#2ed573", "#1e90ff"];
+
+        for (let i = 0; i < 100; i++) {
+          const confetti = document.createElement("div");
+          confetti.className = "confetti";
+          confetti.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+          confetti.style.left = Math.random() * 100 + "vw";
+          confetti.style.top = "100vh";
+          confetti.style.width = Math.random() * 10 + 5 + "px";
+          confetti.style.height = confetti.style.width;
+          confetti.style.animation = `confetti ${
+            Math.random() * 3 + 2
+          }s linear forwards`;
+          confetti.style.animationDelay = Math.random() * 2 + "s";
+          document.body.appendChild(confetti);
+        }
+      }
+
+      // Trigger confetti on page load
+      window.addEventListener("load", () => {
+        createConfetti();
+
+        // Remove confetti after animation
+        setTimeout(() => {
+          document.querySelectorAll(".confetti").forEach((el) => el.remove());
+        }, 5000);
+      });
+    </script>
+  </body>
+</html>
